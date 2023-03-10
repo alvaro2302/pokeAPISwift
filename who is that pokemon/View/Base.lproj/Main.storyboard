@@ -126,24 +126,25 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelMessage" destination="zwc-BK-jXE" id="h3T-YT-Qod"/>
                         <outlet property="labelScore" destination="mXW-d2-WIl" id="gHp-Sm-ZHb"/>
                         <outlet property="pokemonImage" destination="KuH-Tb-DHX" id="WiW-9R-fwn"/>
                         <outletCollection property="answerButtons" destination="YPE-G3-QOR" collectionClass="NSMutableArray" id="XOR-WZ-Z25"/>
                         <outletCollection property="answerButtons" destination="O95-M6-Fow" collectionClass="NSMutableArray" id="Afr-16-cfQ"/>
                         <outletCollection property="answerButtons" destination="s8P-Tu-ouw" collectionClass="NSMutableArray" id="nXA-yj-nJa"/>
                         <outletCollection property="answerButtons" destination="W7F-7Q-PUE" collectionClass="NSMutableArray" id="uvH-gZ-e0d"/>
-                        <segue destination="For-mf-rOd" kind="presentation" identifier="goToResults" modalPresentationStyle="fullScreen" id="rRf-4W-uwv"/>
+                        <segue destination="For-mf-rOd" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="49i-B7-wzt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.53846153846153" y="105.92417061611374"/>
         </scene>
-        <!--Results View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="rIj-8a-Kaa">
             <objects>
-                <viewController id="For-mf-rOd" customClass="ResultsViewController" customModule="who_is_that_pokemon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lsw-wP-l0m">
+                <viewController id="For-mf-rOd" customClass="ResultViewController" customModule="who_is_that_pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Lsw-wP-l0m">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -187,6 +188,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Jugar de nuevo">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playAgainPressed:" destination="For-mf-rOd" eventType="touchUpInside" id="79Z-KG-zMi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -206,7 +210,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Oj2-6v-hZC"/>
                     <connections>
-                        <outlet property="pokemonLabel" destination="bbB-gi-cHs" id="Mj5-qa-28y"/>
+                        <outlet property="buttonAgain" destination="Bl4-Xb-bgQ" id="iFh-R9-hGI"/>
+                        <outlet property="imagePokemon" destination="9Ig-zH-xU7" id="wrs-Jd-pX0"/>
+                        <outlet property="labelScore" destination="zmE-qW-a4E" id="tGM-MT-I10"/>
+                        <outlet property="labelText" destination="bbB-gi-cHs" id="Zq0-dk-bQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaT-i2-BTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

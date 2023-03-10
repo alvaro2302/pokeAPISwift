@@ -6,3 +6,6 @@
 //
 
 import Foundation
+struct ImageModel {
+    let frontDefault: String
+}
